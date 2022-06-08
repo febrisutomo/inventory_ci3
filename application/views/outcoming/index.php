@@ -27,7 +27,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h3 class="text-gray-800 mb-0"><i class="fas fa-upload"></i> Data Barang Masuk</h3>
+                        <h3 class="text-gray-800 mb-0"><i class="fas fa-upload"></i> Data Barang Keluar</h3>
                         <a href="<?= base_url('outcoming/create') ?>" class="btn btn-success"> <i class="fas fa-plus mr-2"></i> Tambah Data</a>
                         <!-- <div class="btn btn-success" data-toggle="modal" data-target="#createModal"> <i class="fas fa-plus mr-2"></i> Tambah Data</div> -->
                     </div>
@@ -38,7 +38,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">List Data Barang Masuk</h6>
+                            <h6 class="m-0 font-weight-bold text-success">List Data Barang Keluar</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -61,7 +61,7 @@
                                             <tr>
                                                 <td><?= $no++ ?></td>
                                                 <td><?= tanggal($outcoming->created_at) ?></td>
-                                                <td><?= kode($outcoming->id, 'TRM') ?></td>
+                                                <td><?= kode($outcoming->id, 'TRK') ?></td>
                                                 <td><?= kode($outcoming->item_id, 'BRG') ?></td>
                                                 <td><?= $outcoming->item_name ?></td>
                                                 <td><?= $outcoming->qty ?></td>

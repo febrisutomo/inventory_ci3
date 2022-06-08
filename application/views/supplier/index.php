@@ -45,6 +45,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Kode</th>
                                             <th>Nama</th>
                                             <th>No.HP</th>
                                             <th>Alamat</th>
@@ -57,6 +58,7 @@
                                         <?php foreach ($suppliers as $supplier) : ?>
                                             <tr>
                                                 <td><?= $no++ ?></td>
+                                                <td><?= kode($supplier->id, 'SUP') ?></td>
                                                 <td><?= $supplier->name ?></td>
                                                 <td><?= $supplier->phone ?></td>
                                                 <td><?= $supplier->address ?></td>

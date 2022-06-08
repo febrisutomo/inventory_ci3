@@ -46,6 +46,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
+                                            <th>Kode</th>
                                             <th>Nama</th>
                                             <th>No.HP</th>
                                             <th>Alamat</th>
@@ -58,6 +59,7 @@
                                         <?php foreach ($customers as $customer) : ?>
                                             <tr>
                                                 <td><?= $no++ ?></td>
+                                                <td><?= kode($customer->id, 'CUS') ?></td>
                                                 <td><?= $customer->name ?></td>
                                                 <td><?= $customer->phone ?></td>
                                                 <td><?= $customer->address ?></td>

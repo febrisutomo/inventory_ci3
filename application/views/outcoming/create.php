@@ -53,7 +53,7 @@
                                         <select class="form-control select2 <?= form_error('customer_id') ? 'is-invalid' : ''; ?>" name="customer_id" id="customer" required>
                                             <option value="">--Pilih Customer--</option>
                                             <?php foreach ($customers as $customer) : ?>
-                                                <option value="<?= $customer->id ?>" <?= set_value('customer_id') == $customer->id ? 'selected' : '' ?>><?= kode($customer->id, 'SUP') ?> | <?= $customer->name ?></option>
+                                                <option value="<?= $customer->id ?>" <?= set_value('customer_id') == $customer->id ? 'selected' : '' ?>><?= kode($customer->id, 'CUS') ?> | <?= $customer->name ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <?= form_error('customer_id', '<small class="text-danger">', '</small>') ?>

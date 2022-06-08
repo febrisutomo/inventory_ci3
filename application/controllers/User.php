@@ -27,13 +27,6 @@ class User extends CI_Controller
     public function create()
     {
 
-        $user = [
-            'name' => $this->input->post('name'),
-            'email' => $this->input->post('email'),
-            'role' => $this->input->post('role'),
-            'status' => $this->input->post('status'),
-            'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
-        ];
 
         $this->form_validation->set_rules('name', 'nama', 'required');
         $this->form_validation->set_rules('role', 'Role', 'required');
@@ -43,6 +36,15 @@ class User extends CI_Controller
         $this->form_validation->set_rules('confirm_password', 'confirm password', 'required|strip_tags|matches[password]');
 
         if ($this->form_validation->run()) {
+            
+            $user = [
+                'name' => $this->input->post('name'),
+                'email' => $this->input->post('email'),
+                'role' => $this->input->post('role'),
+                'status' => $this->input->post('status'),
+                'password' => password_hash($this->input->post('password'), PASSWORD_BCRYPT),
+            ];
+
             if ($this->Auth->email_exists($this->input->post('email'))) {
                 $this->session->set_flashdata("error", "Email telah digunakan!");
                 return $this->load->view("user/create");
